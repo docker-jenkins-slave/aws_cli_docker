@@ -3,7 +3,7 @@ FROM garland/aws-cli-docker:latest
 MAINTAINER adam v0.1
 
 RUN apk update && \
-    apk add bash git openssh rsync && \
+    apk add bash git openssh openjdk8 && \
     ssh-keygen -A && \
     rm -rf /var/cache/apk/*
 
