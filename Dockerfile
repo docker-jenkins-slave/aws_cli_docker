@@ -8,7 +8,7 @@ RUN apk update && \
     rm -rf /var/cache/apk/*
 
 # Add jenkins user with "jenkins" password
-RUN adduser -S jenkins && \
+RUN adduser -S jenkins -s /bin/bash && \
     echo "jenkins:jenkins" | chpasswd
 
 # Standard SSH port
