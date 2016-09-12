@@ -1,17 +1,16 @@
-FROM garland/aws-cli-docker:latest
+FROM jenkinsslave/base_jdk8
 
-MAINTAINER adam v0.1
+MAINTAINER adam v0.2
 
-RUN apk update && \
-    apk add bash git openssh openjdk8 && \
-    ssh-keygen -A && \
-    rm -rf /var/cache/apk/*
+RUN apt-get update && \
+    apt-get install -y \
+        groff \
+        curl \
+        && \
+    rm -rf /var/lib/apt/lists/*
 
-# Add jenkins user with "jenkins" password
-RUN adduser -S jenkins -s /bin/bash && \
-    echo "jenkins:jenkins" | chpasswd
+RUN curl -O https://bootstrap.pypa.io/get-pip.py && \
+    python3 get-pip.py && \
+    pip install awscli && \
+    rm get-pip.py
 
-# Standard SSH port
-EXPOSE 22
-
-CMD ["/usr/sbin/sshd", "-D"]
