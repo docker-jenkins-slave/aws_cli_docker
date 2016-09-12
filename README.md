@@ -1,6 +1,9 @@
 # aws_cli_docker
 Docker slave container with Amazon AWS command line tools
 
+this image is intended to be used with the Jenkins docker plugin, please see bellow for configuration
+https://wiki.jenkins-ci.org/display/JENKINS/Docker+Plugin
+
 # run interactivelly
 docker run -it jenkinsslave/aws_cli_docker /bin/bash
 
