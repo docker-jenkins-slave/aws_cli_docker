@@ -1,6 +1,6 @@
 FROM jenkinsslave/base_jdk8
 
-MAINTAINER adam v0.2
+MAINTAINER adam v0.3
 
 RUN apt-get update && \
     apt-get install -y \
