@@ -19,3 +19,25 @@ aws s3 ls s3://anbucketname
 
 in Jenkins the followin plugin provides credentials, which is configured in the job's Bindings section
 https://wiki.jenkins-ci.org/display/JENKINS/CloudBees+AWS+Credentials+Plugin
+
+
+# Check versions
+docker run -it aws_cli_docker /bin/bash
+java --version
+aws --version
+eb --version
+
+# Versions
+
+v0.5
+openjdk version "1.8.0_91"
+aws-cli/1.11.76 Python/3.5.1+ Linux/3.13.0-106-generic botocore/1.5.39
+EB CLI 3.10.1 (Python 3.5.1)
+
+v0.4 (latest)
+openjdk version "1.8.0_91"
+aws-cli/1.11.54 Python/3.5.1+ Linux/4.4.44-39.55.amzn1.x86_64 botocore/1.5.17
+
+v0.3
+openjdk version "1.8.0_91"
+aws-cli/1.11.20 Python/3.5.1+ Linux/4.4.44-39.55.amzn1.x86_64 botocore/1.4.77
