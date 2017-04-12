@@ -23,7 +23,7 @@ https://wiki.jenkins-ci.org/display/JENKINS/CloudBees+AWS+Credentials+Plugin
 
 # Check versions
 docker run -it aws_cli_docker /bin/bash
-java --version
+java -version
 aws --version
 eb --version
 
